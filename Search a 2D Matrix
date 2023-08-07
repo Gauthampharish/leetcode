@@ -1,0 +1,13 @@
+
+
+
+class Solution(object):
+    def searchMatrix(self, matrix, target):
+        c=len(matrix[0])-1
+        for i in range(len(matrix)):
+            if(target==matrix[i][c]):
+                return True
+            elif(target<matrix[i][c]):
+                if target in matrix[i]:
+                    return True
+        return False
